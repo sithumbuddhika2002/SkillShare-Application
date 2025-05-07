@@ -70,6 +70,7 @@ function Navbar() {
           >
             Subscriptions
           </Link>
+
           {user?.isAdmin && (
             <Link
               to="/admin"
@@ -82,6 +83,7 @@ function Navbar() {
               Admin
             </Link>
           )}
+          
           <motion.button
             whileHover={{ scale: 1.1 }}
             onClick={toggleTheme}

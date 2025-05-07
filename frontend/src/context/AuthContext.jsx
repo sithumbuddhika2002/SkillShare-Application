@@ -7,9 +7,9 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [notifications, setNotifications] = useState([]);
+  const [isLogin, setIsLogin] = useState(true);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [showAuthForm, setShowAuthForm] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
